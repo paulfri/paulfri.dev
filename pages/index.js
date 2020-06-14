@@ -1,53 +1,112 @@
 import Head from "next/head";
-import "twin.macro";
+import {
+  Instagram,
+  Github as GitHub,
+  Linkedin as LinkedIn,
+  Twitter,
+} from "@icons-pack/react-simple-icons";
+import tw from "twin.macro";
+
+const Link = tw.a`
+  text-green-400
+  transition ease-in-out duration-150
+  border-b hover:border-green-400
+`;
+
+const SocialLink = tw.a`
+  my-2 mx-4
+  transition ease-in-out duration-150
+  opacity-25 hover:opacity-50
+`;
 
 export default function Home() {
   return (
-    <div tw="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div tw="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex h-screen">
       <Head>
-        <title>Paul Friedman, software engineer</title>
+        <title>Paul Friedman &middot; paulfri.dev</title>
         <link
           rel="icon"
           href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌉</text></svg>"
         />
       </Head>
 
-      <nav>
-        <ul>
-          <li>About</li>
-          <li>
-            <a href="/static/resume.pdf" _target="blank">
-              Résumé
-            </a>
-          </li>
-        </ul>
-      </nav>
-
-      <main>
-        <div tw="max-w-3xl mx-auto">
+      <main tw="mt-12 mb-auto mt-auto flex flex-row-reverse">
+        <img
+          tw="rounded-full h-64 w-auto hidden md:block"
+          src="/static/profile.jpg"
+        />
+        <div tw="max-w-3xl mx-auto relative">
           <h1 tw="text-6xl font-bold">Paul Friedman</h1>
-          <p>
-            Hello 👋 I'm Paul, a software engineer currently building
-            infrastructure powering Percy.
+          <p tw="text-4xl mt-6 mb-3">Hey there 👋</p>
+          <p tw="text-3xl mt-6 mb-6">
+            I'm Paul, a full-stack software engineer based in San Francisco
+            currently building the infrastructure powering{" "}
+            <Link href="https://percy.io">
+              the next generation of visual testing
+            </Link>
+            .
           </p>
 
-          <p>
-            Previously, I helped keep the internet more secure, built one of the
-            world's largest travel search engines, and helped deliver content to
-            millions of video game fans.
+          <section tw="my-6 w-1/2 m-auto flex justify-center items-center">
+            <SocialLink href="https://github.com/paulfri" target="_blank">
+              <GitHub tw="inline-block" color="#000" size={36} />
+            </SocialLink>
+            <SocialLink href="https://twitter.com/paulfri" target="_blank">
+              <Twitter tw="inline-block" color="#000" size={36} />
+            </SocialLink>
+            <SocialLink href="https://instagram.com/paulfri" target="_blank">
+              <Instagram tw="inline-block" color="#000" size={36} />
+            </SocialLink>
+            <SocialLink
+              href="https://www.linkedin.com/in/paulfri"
+              target="_blank"
+            >
+              <LinkedIn tw="inline-block" color="#000" size={36} />
+            </SocialLink>
+          </section>
+
+          <p tw="text-xl my-6">
+            Previously, I've built software at startups in San Francisco to
+            Seattle. I studied philosophy at the{" "}
+            <Link href="https://buffalo.edu" target="_blank">
+              University at Buffalo
+            </Link>{" "}
+            and information science at{" "}
+            <Link href="https://syracuse.edu" target="_blank">
+              Syracuse University
+            </Link>
+            , near my hometown of Ithaca, New York.{" "}
+            <Link href="/static/resume.pdf" target="_blank">
+              View my résumé
+            </Link>
+            .
           </p>
 
-          <p>Email me at paulrfri@gmail.com.</p>
+          <p tw="text-xl my-6">
+            Off the clock, I spoil my dog,{" "}
+            <Link href="https://instagram.com/hadsfri" target="_blank">
+              Hadley
+            </Link>
+            , watch the{" "}
+            <Link href="https://twitter.com/SoundersFC" target="_blank">
+              Sounders
+            </Link>{" "}
+            on Saturday nights,{" "}
+            <Link href="https://twitter.com/SpursOfficial" target="_blank">
+              Spurs
+            </Link>{" "}
+            on Sunday mornings, and travel extensively (well, back when that was
+            a thing).
+          </p>
+
+          <p tw="mb-12">
+            <strong>Let's get in touch:</strong> Email me at{" "}
+            <Link href="mailto:paulrfri@gmail.com">paulrfri@gmail.com</Link> or
+            mention me <Link href="https://twitter.com/paulfri">@paulfri</Link>.
+            DMs open.
+          </p>
         </div>
       </main>
-
-      <footer>
-        <p>Made by Paul Friedman in Seattle 🏔 and San Francisco 🌉.</p>
-        <ul>
-          <li>Twitter</li>
-          <li>GitHub</li>
-        </ul>
-      </footer>
     </div>
   );
 }
