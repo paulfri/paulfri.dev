@@ -45,12 +45,9 @@ export default function Home() {
           <h1 tw="text-6xl font-bold">Paul Friedman</h1>
           <p tw="text-4xl mt-6 mb-3">Hey there 👋</p>
           <p tw="text-3xl mt-6 mb-6">
-            I'm Paul, a full-stack software engineer based in San Francisco
-            currently building the infrastructure powering{" "}
-            <Link href="https://percy.io">
-              the next generation of visual testing
-            </Link>
-            .
+            I'm Paul, a full-stack software engineer based in San Francisco,
+            currently building the Internet's{" "}
+            <Link href="https://percy.io">visual testing infrastructure</Link>.
           </p>
 
           <section tw="my-6 w-1/2 m-auto flex justify-center items-center">
@@ -72,7 +69,7 @@ export default function Home() {
           </section>
 
           <p tw="text-xl my-6">
-            Previously, I've built software at startups in San Francisco to
+            Previously, I've built software at startups from San Francisco to
             Seattle. I studied philosophy at the{" "}
             <Link href="https://buffalo.edu">University at Buffalo</Link> and
             information science at{" "}
@@ -85,14 +82,14 @@ export default function Home() {
             Off the clock, I spoil my dog,{" "}
             <Link href="https://instagram.com/hadsfri">Hadley</Link>, watch the{" "}
             <Link href="https://twitter.com/SoundersFC">Sounders</Link> on
-            Saturday nights,{" "}
+            Saturday nights and{" "}
             <Link href="https://twitter.com/SpursOfficial">Spurs</Link> on
             Sunday mornings, and travel extensively (well, back when that was a
             thing).
           </p>
 
           <p tw="mb-12">
-            <strong>Let's get in touch:</strong> Email me at{" "}
+            <strong>Let's get in touch.</strong> Email me at{" "}
             <Link href="mailto:paulrfri@gmail.com">paulrfri@gmail.com</Link> or
             mention me <Link href="https://twitter.com/paulfri">@paulfri</Link>.
             DMs open.
