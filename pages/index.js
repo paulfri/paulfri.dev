@@ -7,11 +7,17 @@ import {
 } from "@icons-pack/react-simple-icons";
 import tw from "twin.macro";
 
-const Link = tw.a`
+const StyledLink = tw.a`
   text-green-400
   transition ease-in-out duration-150
   border-b hover:border-green-400
 `;
+
+const Link = ({ children, ...props }) => (
+  <StyledLink {...props} target="_blank">
+    {children}
+  </StyledLink>
+);
 
 const SocialLink = tw.a`
   my-2 mx-4
@@ -23,7 +29,7 @@ export default function Home() {
   return (
     <div tw="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex h-screen">
       <Head>
-        <title>Paul Friedman &middot; paulfri.dev</title>
+        <title>Paul Friedman</title>
         <link
           rel="icon"
           href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌉</text></svg>"
@@ -68,35 +74,21 @@ export default function Home() {
           <p tw="text-xl my-6">
             Previously, I've built software at startups in San Francisco to
             Seattle. I studied philosophy at the{" "}
-            <Link href="https://buffalo.edu" target="_blank">
-              University at Buffalo
-            </Link>{" "}
-            and information science at{" "}
-            <Link href="https://syracuse.edu" target="_blank">
-              Syracuse University
-            </Link>
-            , near my hometown of Ithaca, New York.{" "}
-            <Link href="/static/resume.pdf" target="_blank">
-              View my résumé
-            </Link>
-            .
+            <Link href="https://buffalo.edu">University at Buffalo</Link> and
+            information science at{" "}
+            <Link href="https://syracuse.edu">Syracuse University</Link>, near
+            my hometown of Ithaca, New York.{" "}
+            <Link href="/static/resume.pdf">View my résumé</Link>.
           </p>
 
           <p tw="text-xl my-6">
             Off the clock, I spoil my dog,{" "}
-            <Link href="https://instagram.com/hadsfri" target="_blank">
-              Hadley
-            </Link>
-            , watch the{" "}
-            <Link href="https://twitter.com/SoundersFC" target="_blank">
-              Sounders
-            </Link>{" "}
-            on Saturday nights,{" "}
-            <Link href="https://twitter.com/SpursOfficial" target="_blank">
-              Spurs
-            </Link>{" "}
-            on Sunday mornings, and travel extensively (well, back when that was
-            a thing).
+            <Link href="https://instagram.com/hadsfri">Hadley</Link>, watch the{" "}
+            <Link href="https://twitter.com/SoundersFC">Sounders</Link> on
+            Saturday nights,{" "}
+            <Link href="https://twitter.com/SpursOfficial">Spurs</Link> on
+            Sunday mornings, and travel extensively (well, back when that was a
+            thing).
           </p>
 
           <p tw="mb-12">
