@@ -3,7 +3,7 @@ import {
   Instagram,
   Github as GitHub,
   Linkedin as LinkedIn,
-  Twitter,
+  Twitter
 } from "@icons-pack/react-simple-icons";
 import tw from "twin.macro";
 
@@ -42,7 +42,7 @@ export default function Home() {
 
       <main tw="mt-12 mb-auto mt-auto flex flex-row-reverse">
         <img
-          tw="rounded-full h-64 w-auto hidden md:block"
+          tw="rounded-full mt-4 h-64 w-auto hidden md:block"
           src="/static/profile.jpg"
         />
         <div tw="max-w-3xl mx-auto relative">
