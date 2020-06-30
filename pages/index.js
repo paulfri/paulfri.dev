@@ -94,7 +94,7 @@ export default function Home() {
 
           <p tw="mb-12">
             <strong>Let's get in touch.</strong> Email me at{" "}
-            <Link href="mailto:paulrfri@gmail.com">paulrfri@gmail.com</Link> or
+            <Link href="mailto:paulfri@hey.com">paulfri@hey.com</Link> or
             mention me <Link href="https://twitter.com/paulfri">@paulfri</Link>.
             DMs open.
           </p>
