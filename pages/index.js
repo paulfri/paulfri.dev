@@ -72,7 +72,7 @@ export default function Home() {
 
           <p tw="text-xl my-6">
             I'm currently a software engineer at{" "}
-            <Link href="https://www.lattice.com">Lattice</Link>
+            <Link href="https://lattice.com">Lattice</Link>
             .
           </p>
 
