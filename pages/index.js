@@ -49,9 +49,7 @@ export default function Home() {
           <h1 tw="text-6xl font-bold">Paul Friedman</h1>
           <p tw="text-4xl mt-6 mb-3">Hey there 👋</p>
           <p tw="text-3xl mt-6 mb-6">
-            I'm Paul, a full-stack software engineer based in San Francisco,
-            currently building the Internet's{" "}
-            <Link href="https://percy.io">visual testing infrastructure</Link>.
+            I'm Paul, a full-stack software engineer based in Seattle.
           </p>
 
           <section tw="my-6 w-1/2 m-auto flex justify-center items-center">
@@ -73,13 +71,18 @@ export default function Home() {
           </section>
 
           <p tw="text-xl my-6">
+            I'm currently a software engineer at{" "}
+            <Link href="https://www.lattice.com">Lattice</Link>
+            .
+          </p>
+
+          <p tw="text-xl my-6">
             Previously, I've built software at startups from San Francisco to
             Seattle. I studied philosophy at the{" "}
             <Link href="https://buffalo.edu">University at Buffalo</Link> and
             information science at{" "}
             <Link href="https://syracuse.edu">Syracuse University</Link>, near
             my hometown of Ithaca, New York.{" "}
-            <Link href="/static/resume.pdf">View my résumé</Link>.
           </p>
 
           <p tw="text-xl my-6">
